@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in &mdash; Smart Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital@1&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="login-page">
+  <div class="login-card">
+    <div class="brand" style="border:0;padding:0;margin:0">
+      <span class="brand-ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v15"/><path d="M14 21v-9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v9"/><path d="M4 21h16M7 9h1M7 13h1M7 17h1M10 9h1M10 13h1M10 17h1M17 13h1M17 17h1"/></svg></span>
+      <span><b style="color:var(--ink)">Smart Society</b><small style="color:var(--ink-soft)">B Block &middot; Mayfield Gardens RWA</small></span>
+    </div>
+    <p class="tagline" style="margin-top:1.4rem" id="loginTagline">Sign in to continue</p>
+
+    <div class="login-tabs">
+      <button type="button" class="is-on" id="tabResident">Resident</button>
+      <button type="button" id="tabAdmin">RWA Staff</button>
+    </div>
+
+    <p class="error-note" id="loginError" hidden></p>
+    <p class="ok-note" id="loginOk" hidden></p>
+
+    <form id="residentForm" novalidate>
+      <div class="field" data-only="signup">
+        <label for="rName">Your name</label>
+        <input type="text" id="rName" name="fullName" placeholder="Himanshi Rawal" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="rAddress">Address</label>
+        <input type="text" id="rAddress" name="address" placeholder="B-10, Mayfield Gardens" autocomplete="street-address">
+      </div>
+      <div class="field" data-only="signup">
+        <label for="rPhone">Phone <span style="text-transform:none;font-weight:400">(optional)</span></label>
+        <input type="tel" id="rPhone" name="phone" placeholder="98XXXXXXXX" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="rPass">Password</label>
+        <input type="password" id="rPass" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="new-password">
+      </div>
+      <div class="field" data-only="signup">
+        <label for="rPass2">Confirm password</label>
+        <input type="password" id="rPass2" name="password2" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="new-password">
+      </div>
+      <button class="btn btn-lime wide" type="submit" id="rSubmit">SIGN IN</button>
+    </form>
+
+    <form id="adminForm" novalidate hidden>
+      <div class="field" data-only="signup">
+        <label for="aName">Your name</label>
+        <input type="text" id="aName" name="fullName" placeholder="Suresh Kumar" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="aId">Staff ID</label>
+        <input type="text" id="aId" name="staffId" placeholder="RWA-04" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="aPass">Desk password</label>
+        <input type="password" id="aPass" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="new-password">
+      </div>
+      <div class="field" data-only="signup">
+        <label for="aPass2">Confirm password</label>
+        <input type="password" id="aPass2" name="password2" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="new-password">
+      </div>
+      <button class="btn btn-dark wide" type="submit" id="aSubmit">SIGN IN</button>
+    </form>
+
+    <p class="mode-toggle"><button type="button" id="modeToggle">New here? Create an account</button></p>
+    <p class="muted" style="margin-top:1rem;font-size:.8rem">Demo build &mdash; accounts are stored in this browser only. Connect this form to your Flask <code>/api/auth</code> routes for real accounts.</p>
+  </div>
+</main>
+<script src="auth.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

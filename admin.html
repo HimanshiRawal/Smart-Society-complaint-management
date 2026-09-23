@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — Smart Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital@1&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scrim" id="scrim"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="dashboard.html">
+    <span class="brand-ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v15"/><path d="M14 21v-9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v9"/><path d="M4 21h16M7 9h1M7 13h1M7 17h1M10 9h1M10 13h1M10 17h1M17 13h1M17 17h1"/></svg></span>
+    <span>
+      <b>Smart Society</b>
+      <small>B Block &middot; Mayfield Gardens RWA</small>
+    </span>
+  </a>
+  <nav class="side-nav">
+      <a href="dashboard.html" data-nav="dashboard"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/></svg><span>Dashboard</span></a>
+      <a href="services.html" data-nav="services"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.2L3 17.6V21h3.4l6.1-6.1a4 4 0 0 0 5.2-5.6l-2.6 2.6-2-2 2.6-2.6z"/></svg><span>Services</span></a>
+      <a href="complaints.html" data-nav="complaints"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3 6 1.4 1.4L7 4.6M3 12l1.4 1.4L7 10.6M3 18l1.4 1.4L7 16.6"/></svg><span>Your Complaints</span></a>
+      <a href="new-complaint.html" data-nav="new-complaint"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New Complaint</span></a>
+      <a href="admin.html" data-nav="admin" id="adminNavLink"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M17 6l2 2M14 9l2 2"/></svg><span>Admin</span></a>
+  </nav>
+  <div class="side-spacer"></div>
+  <div class="user-card">
+    <b id="sideName">Resident</b>
+    <small id="sideMeta">Address &mdash; &middot; Resident</small>
+    <button class="btn btn-lime wide" id="logoutBtn" type="button"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17l5-5-5-5M15 12H3M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/></svg> LOG OUT</button>
+  </div>
+  <p class="side-foot">Aligned with UN SDG 11 &mdash; Sustainable Cities &amp; Communities</p>
+</aside>
+
+<div style="flex:1;min-width:0;display:flex;flex-direction:column">
+  <div class="mobile-bar">
+    <a class="brand" href="dashboard.html">
+      <span class="brand-ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v15"/><path d="M14 21v-9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v9"/><path d="M4 21h16M7 9h1M7 13h1M7 17h1M10 9h1M10 13h1M10 17h1M17 13h1M17 17h1"/></svg></span>
+      <span><b>Smart Society</b><small>B Block &middot; Mayfield Gardens RWA</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+  <main class="main">
+    <div class="pagewrap">
+
+      <div class="pagehead">
+        <p class="tagline">RWA staff desk</p>
+        <h1>Admin</h1>
+        <p class="lede">Every complaint logged for B Block. Change a status and the resident sees it update on their side.</p>
+      </div>
+      <div class="stats" id="deskStrip"></div>
+      <div class="two-col">
+        <div>
+          <div class="table-toolbar">
+            <select id="filterStatus">
+              <option value="all">All statuses</option>
+              <option>Pending</option><option>In progress</option><option>Resolved</option>
+            </select>
+            <select id="filterCat"><option value="all">All categories</option></select>
+            <button class="btn btn-outline btn-sm" id="resetBtn" type="button">Reset demo data</button>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Ticket</th><th>Issue</th><th>Address</th><th>Logged</th><th>Status</th></tr></thead>
+              <tbody id="deskBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <aside>
+          <div class="card pad" style="margin-bottom:1.1rem">
+            <h3 style="font-size:1.02rem;margin-bottom:1rem">Where complaints come from</h3>
+            <div class="bars" id="catBars"></div>
+          </div>
+          <div class="card pad">
+            <h3 style="font-size:1.02rem;margin-bottom:.6rem">Oldest still open</h3>
+            <p id="oldest" class="muted" style="font-size:.88rem"></p>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+</div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+<script src="auth.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

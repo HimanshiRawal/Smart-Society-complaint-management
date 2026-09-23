@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Complaint — Smart Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital@1&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scrim" id="scrim"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="dashboard.html">
+    <span class="brand-ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v15"/><path d="M14 21v-9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v9"/><path d="M4 21h16M7 9h1M7 13h1M7 17h1M10 9h1M10 13h1M10 17h1M17 13h1M17 17h1"/></svg></span>
+    <span>
+      <b>Smart Society</b>
+      <small>B Block &middot; Mayfield Gardens RWA</small>
+    </span>
+  </a>
+  <nav class="side-nav">
+      <a href="dashboard.html" data-nav="dashboard"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/></svg><span>Dashboard</span></a>
+      <a href="services.html" data-nav="services"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.2L3 17.6V21h3.4l6.1-6.1a4 4 0 0 0 5.2-5.6l-2.6 2.6-2-2 2.6-2.6z"/></svg><span>Services</span></a>
+      <a href="complaints.html" data-nav="complaints"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3 6 1.4 1.4L7 4.6M3 12l1.4 1.4L7 10.6M3 18l1.4 1.4L7 16.6"/></svg><span>Your Complaints</span></a>
+      <a href="new-complaint.html" data-nav="new-complaint"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New Complaint</span></a>
+      <a href="admin.html" data-nav="admin" id="adminNavLink"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M17 6l2 2M14 9l2 2"/></svg><span>Admin</span></a>
+  </nav>
+  <div class="side-spacer"></div>
+  <div class="user-card">
+    <b id="sideName">Resident</b>
+    <small id="sideMeta">Address &mdash; &middot; Resident</small>
+    <button class="btn btn-lime wide" id="logoutBtn" type="button"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17l5-5-5-5M15 12H3M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/></svg> LOG OUT</button>
+  </div>
+  <p class="side-foot">Aligned with UN SDG 11 &mdash; Sustainable Cities &amp; Communities</p>
+</aside>
+
+<div style="flex:1;min-width:0;display:flex;flex-direction:column">
+  <div class="mobile-bar">
+    <a class="brand" href="dashboard.html">
+      <span class="brand-ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v15"/><path d="M14 21v-9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v9"/><path d="M4 21h16M7 9h1M7 13h1M7 17h1M10 9h1M10 13h1M10 17h1M17 13h1M17 17h1"/></svg></span>
+      <span><b>Smart Society</b><small>B Block &middot; Mayfield Gardens RWA</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+  <main class="main">
+    <div class="pagewrap">
+
+      <div class="pagehead">
+        <p class="tagline">Takes less than a minute</p>
+        <h1>Add New Complaint</h1>
+      </div>
+      <div class="card pad">
+        <p class="tagline" id="svcBanner" hidden style="margin-bottom:1rem"></p>
+        <form id="complaintForm" novalidate>
+          <div class="field">
+            <label>Category</label>
+            <div class="cats">
+              <label class="cat"><input type="radio" name="category" value="Maintenance" checked><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.2L3 17.6V21h3.4l6.1-6.1a4 4 0 0 0 5.2-5.6l-2.6 2.6-2-2 2.6-2.6z"/></svg>Maintenance</label>
+              <label class="cat"><input type="radio" name="category" value="Water"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 6-11 6-11z"/></svg>Water</label>
+              <label class="cat"><input type="radio" name="category" value="Electricity"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>Electricity</label>
+              <label class="cat"><input type="radio" name="category" value="Cleanliness"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.5 6.5l2 2M15.5 15.5l2 2M17.5 6.5l-2 2M8.5 15.5l-2 2"/></svg>Cleanliness</label>
+              <label class="cat"><input type="radio" name="category" value="Security"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v6c0 4.4-3 8-7 9-4-1-7-4.6-7-9V6l7-3z"/></svg>Security</label>
+              <label class="cat"><input type="radio" name="category" value="Other"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>Other</label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="title">Complaint title</label>
+            <input type="text" id="title" name="title" placeholder="e.g. Water leakage in basement parking">
+          </div>
+          <div class="field">
+            <label for="details">Description</label>
+            <textarea id="details" name="details" placeholder="Describe the issue — where it is, since when, and how urgent it feels."></textarea>
+          </div>
+          <div class="field">
+            <label>Priority</label>
+            <div class="pri">
+              <label><input type="radio" name="urgency" value="Low">Low</label>
+              <label><input type="radio" name="urgency" value="Medium" checked>Medium</label>
+              <label><input type="radio" name="urgency" value="High">High</label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="B-10, Mayfield Gardens" autocomplete="street-address">
+          </div>
+          <button class="btn btn-lime wide" type="submit"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg> SUBMIT COMPLAINT</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+<script src="auth.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
